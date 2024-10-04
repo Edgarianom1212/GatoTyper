@@ -5,6 +5,7 @@
 			 xmlns:vm="using:GatoTyper.ViewModels"
 			 xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
 			 xmlns:i="https://github.com/projektanker/icons.avalonia"
+			 xmlns:local="using:GatoTyper.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 x:DataType="vm:MainWindowViewModel"
              x:Class="GatoTyper.Views.MainWindow">
@@ -30,9 +31,7 @@
 					</Image>
 				</suki:SukiSideMenuItem.Icon>
 				<suki:SukiSideMenuItem.PageContent>
-					<Grid>
-						
-					</Grid>
+					<local:Typing/>
 				</suki:SukiSideMenuItem.PageContent>
 			</suki:SukiSideMenuItem>
 			<suki:SukiSideMenuItem Header="Stats">
@@ -44,9 +43,7 @@
 					</Image>
 				</suki:SukiSideMenuItem.Icon>
 				<suki:SukiSideMenuItem.PageContent>
-					<Grid>
-
-					</Grid>
+					<local:Statistics/>
 				</suki:SukiSideMenuItem.PageContent>
 			</suki:SukiSideMenuItem>
 			<suki:SukiSideMenuItem Header="Settings">
@@ -58,9 +55,7 @@
 					</Image>
 				</suki:SukiSideMenuItem.Icon>
 				<suki:SukiSideMenuItem.PageContent>
-					<Grid>
-
-					</Grid>
+					<local:Settings/>
 				</suki:SukiSideMenuItem.PageContent>
 			</suki:SukiSideMenuItem>
 		</suki:SukiSideMenu.Items>
