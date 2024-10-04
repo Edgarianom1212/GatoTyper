@@ -11,9 +11,8 @@ namespace GatoTyper.Views
 		public ParentSuki()
 		{
 			InitializeComponent();
-			var BlackTheme = new SukiColorTheme("Black", Colors.Black, Colors.Black);
-			SukiTheme.GetInstance().AddColorTheme(BlackTheme);
-			SukiTheme.GetInstance().ChangeColorTheme(BlackTheme);
+			this.BackgroundStyle = SukiUI.Enums.SukiBackgroundStyle.Gradient;
+			SukiTheme.GetInstance().ChangeColorTheme(new SukiColorTheme("Black", Colors.Black, Colors.Black));
 		}
 	}
 }

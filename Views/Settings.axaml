@@ -5,13 +5,53 @@
 			 xmlns:vm="using:GatoTyper.ViewModels"
 			 xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
 			 xmlns:i="https://github.com/projektanker/icons.avalonia"
+			 xmlns:theme="clr-namespace:SukiUI.Theme;assembly=SukiUI"
 			 x:DataType="vm:Settings"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="GatoTyper.Views.Settings">
 	<Design.DataContext>
 		<vm:Settings/>
 	</Design.DataContext>
-	<Grid>
-		<Label Content="Settings"/>
+	<UserControl.Styles>
+		<Style Selector="DockPanel StackPanel">
+			<Setter Property="DockPanel.Dock" Value="Right"/>
+		</Style>
+		<Style Selector="StackPanel Button">
+			<Setter Property="Margin" Value="5"/>
+			<Setter Property="BorderThickness" Value="5"/>
+		</Style>
+		<Style Selector="DockPanel TextBlock">
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="FontSize" Value="15"/>
+		</Style>
+	</UserControl.Styles>
+	<Grid RowDefinitions="Auto, 1*">
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,50,0,0">
+			<i:Icon Value="mdi-cog" FontSize="40" Margin="0,5,0,0" Animation="Spin"/>
+			<Label Content="Settings" FontSize="40"/>
+		</StackPanel>
+		<StackPanel Grid.Row="1" Margin="50,100,50,0">
+			<suki:GlassCard>
+				<DockPanel>
+					<StackPanel Orientation="Horizontal">
+						<Button Content="Light" Click="LightTheme"/>
+						<Button Content="Dark" Click="DarkTheme"/>
+					</StackPanel>
+					<TextBlock Text="Background theme" FontWeight="Bold" VerticalAlignment="Center"/>
+				</DockPanel>
+			</suki:GlassCard>
+			<suki:GlassCard>
+				<DockPanel>
+					<StackPanel Orientation="Horizontal">
+						<Button x:Name="Test" Content="Orange" Click="ColorOrange" BorderBrush="Orange"/>
+						<Button Content="Blue" Click="ColorBlue" BorderBrush="Blue"/>
+						<Button Content="Green" Click="ColorGreen" BorderBrush="Green"/>
+						<Button Content="Red" Click="ColorRed" BorderBrush="Red"/>
+						<Button Content="Black" Click="ColorBlack" BorderBrush="Black"/>
+					</StackPanel>
+					<TextBlock Text="Color theme" FontWeight="Bold" VerticalAlignment="Center"/>
+				</DockPanel>
+			</suki:GlassCard>
+		</StackPanel>
 	</Grid>
 </UserControl>
