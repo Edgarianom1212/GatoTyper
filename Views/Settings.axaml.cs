@@ -34,7 +34,7 @@ public partial class Settings : UserControl
 	}
 	private void ColorBlack(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
 	{
-		SukiTheme.GetInstance().ChangeColorTheme(new SukiColorTheme("Black", Colors.Black, Colors.Black));
+		SukiTheme.GetInstance().ChangeColorTheme(new SukiColorTheme("Black", Colors.White, Colors.Black));
 	}
 	private void LightTheme(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
 	{

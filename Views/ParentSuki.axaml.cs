@@ -3,6 +3,7 @@ using Avalonia.Media;
 using SukiUI;
 using SukiUI.Controls;
 using SukiUI.Models;
+using System.Linq;
 
 namespace GatoTyper.Views
 {
@@ -12,7 +13,8 @@ namespace GatoTyper.Views
 		{
 			InitializeComponent();
 			this.BackgroundStyle = SukiUI.Enums.SukiBackgroundStyle.Gradient;
-			SukiTheme.GetInstance().ChangeColorTheme(new SukiColorTheme("Black", Colors.Black, Colors.Black));
+			SukiColorTheme BlackTheme = new SukiColorTheme("Black", Colors.White, Colors.Black);
+			SukiTheme.GetInstance().ChangeColorTheme(BlackTheme);
 		}
 	}
 }

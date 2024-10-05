@@ -24,6 +24,31 @@
 			<Setter Property="FontWeight" Value="Bold"/>
 			<Setter Property="FontSize" Value="15"/>
 		</Style>
+		<Style Selector="Button.ColorButton:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+				<Setter Property="Background" Value="Transparent"/>
+				<Setter Property="TextBlock.Foreground" Value="{TemplateBinding BorderBrush}"/>
+		</Style>
+		<Style Selector="suki|GlassCard">
+			<Setter Property="Margin" Value="0,10,0,0"/>
+		</Style>
+		<Style Selector="Button.ColorButton">
+			<Setter Property="Template">
+				<ControlTemplate>
+					<ContentPresenter x:Name="PART_ContentPresenter"
+						Background="{TemplateBinding Background}"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="{TemplateBinding BorderThickness}"
+						CornerRadius="{TemplateBinding CornerRadius}"
+						Content="{TemplateBinding Content}"
+						ContentTemplate="{TemplateBinding ContentTemplate}"
+						Padding="{TemplateBinding Padding}"
+						RecognizesAccessKey="True"
+						HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+						FontWeight="Bold"
+						VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+				</ControlTemplate>
+			</Setter>
+		</Style>
 	</UserControl.Styles>
 	<Grid RowDefinitions="Auto, 1*">
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,50,0,0">
@@ -43,11 +68,11 @@
 			<suki:GlassCard>
 				<DockPanel>
 					<StackPanel Orientation="Horizontal">
-						<Button x:Name="Test" Content="Orange" Click="ColorOrange" BorderBrush="Orange"/>
-						<Button Content="Blue" Click="ColorBlue" BorderBrush="Blue"/>
-						<Button Content="Green" Click="ColorGreen" BorderBrush="Green"/>
-						<Button Content="Red" Click="ColorRed" BorderBrush="Red"/>
-						<Button Content="Black" Click="ColorBlack" BorderBrush="Black"/>
+						<Button Classes="ColorButton" Content="Orange" Click="ColorOrange" BorderBrush="Orange"/>
+						<Button Classes="ColorButton" Content="Blue" Click="ColorBlue" BorderBrush="Blue"/>
+						<Button Classes="ColorButton" Content="Green" Click="ColorGreen" BorderBrush="Green"/>
+						<Button Classes="ColorButton" Content="Red" Click="ColorRed" BorderBrush="Red"/>
+						<Button Classes="ColorButton" Content="Black" Click="ColorBlack" BorderBrush="Black"/>
 					</StackPanel>
 					<TextBlock Text="Color theme" FontWeight="Bold" VerticalAlignment="Center"/>
 				</DockPanel>
