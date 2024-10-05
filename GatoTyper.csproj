@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Assets\EnglishWords.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.2.0-rc1" />
     <PackageReference Include="Avalonia.Desktop" Version="11.2.0-rc1" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.0-rc1" />
